@@ -42,4 +42,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-exe
-          path: dist/**
+          # explicit path from repo root to the dist output inside the Arabic subfolder
+          path: ./الصياد/dist/**
