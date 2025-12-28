@@ -42,6 +42,7 @@
     },
     "directories": {
       "output": "dist"
-    }
+    },
+    "publish": null
   }
 }
