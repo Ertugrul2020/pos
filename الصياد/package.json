@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron .",
     "build": "vite build",
-    "build:electron": "npm run build && electron-builder --win --x64",
+    "build:electron": "npm run build && electron-builder --win --x64 --publish never",
     "dist": "electron-builder"
   },
   "author": "Al-Sayyad",
