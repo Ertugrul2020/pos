@@ -1,0 +1,6 @@
+# Ignore build artifacts and local dist
+artifacts/
+dist/
+node_modules/
+.DS_Store
+.env

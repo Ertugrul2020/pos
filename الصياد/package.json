@@ -7,6 +7,7 @@
   "scripts": {
     "start": "electron .",
     "build": "vite build",
+    "build:win": "npm run build && electron-builder --win --x64 --publish never",
     "build:electron": "npm run build && electron-builder --win --x64 --publish never",
     "dist": "electron-builder"
   },
@@ -28,12 +29,20 @@
   "build": {
     "appId": "com.alsayyad.pos",
     "productName": "AlSayyadPOS",
+    "icon": "build/icon.ico",
     "files": [
       "dist/**",
       "electron-main.js",
       "package.json",
       "node_modules/**"
     ],
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
     "win": {
       "target": [
         "nsis",
